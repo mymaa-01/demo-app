@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rentify
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
+
+application:
+  security:
+    jwt:
+      secret-key : ed2acfa9d5182083cf5b2011ee03577400d1dc1765493eb72c1da690ad465915
+      expiration: 600000
+      refresh-token:
+        expiration: 900000
+
+
